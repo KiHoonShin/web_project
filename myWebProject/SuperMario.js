@@ -79,8 +79,8 @@ const 굼바 = new Image();
 const 플라잉굼바 = new Image();
 플라잉굼바.src = './img/플라잉굼바.png';
 
-const 태양 = new Image();
-태양.src = './img/태양.png';
+const 별 = new Image();
+별.src = './img/별.png';
 
 const 문 = new Image();
 문.src = './img/문.png';
@@ -264,7 +264,7 @@ class Player {
             stage += 1;
           }
         }
-        if (obj.name === '태양') {
+        if (obj.name === '별') {
           // console.log(obj.id);
           eatStar.push(obj.id);
           console.log(eatStar);
@@ -602,7 +602,7 @@ class Object {
   }
 
   renderSun(ctx) {
-    ctx.drawImage(태양, this.x, this.y, this.width, this.height);
+    ctx.drawImage(별, this.x, this.y, this.width, this.height);
   }
 
   renderMagnum(ctx) {
@@ -639,10 +639,10 @@ function add() {
   objectList.push(new Object('파이프', '함정', canvas.width - 700, 400, 100, 200));
   objectList.push(new Object('파이프', 0, canvas.width - 100, 400, 100, 200));
 
-  objectList.push(new Object('태양', '태양1', 100, 100, 50, 50));
-  objectList.push(new Object('태양', '태양2', 400, 438, 50, 50));
-  objectList.push(new Object('태양', '태양3', 730, 70, 50, 50));
-  objectList.push(new Object('태양', '태양4', 983, 500, 50, 50));
+  objectList.push(new Object('별', '별1', 100, 100, 50, 50));
+  objectList.push(new Object('별', '별2', 400, 438, 50, 50));
+  objectList.push(new Object('별', '별3', 730, 70, 50, 50));
+  objectList.push(new Object('별', '별4', 983, 500, 50, 50));
 
   console.log(objectList);
   objectList.forEach((e) => {
@@ -699,7 +699,7 @@ function draw() {
       e.renderNumberTwo(ctx);
     } else if (e.name === '숫자3') {
       e.renderNumberThree(ctx);
-    } else if (e.name === '태양') {
+    } else if (e.name === '별') {
       e.renderSun(ctx);
     } else if (e.name === '매그넘') {
       e.renderMagnum(ctx);
@@ -869,10 +869,10 @@ function openNewStage2() {
   objectList.push(new Object('파이프', 0, canvas.width - 100, 400, 100, 200));
   objectList.push(new Object('버튼꽃', 0, canvas.width - 90, 320, 80, 80));
 
-  objectList.push(new Object('태양', '태양1', 100, 100, 50, 50));
-  objectList.push(new Object('태양', '태양2', 400, 538, 50, 50));
-  objectList.push(new Object('태양', '태양3', 730, 70, 50, 50));
-  objectList.push(new Object('태양', '태양4', 983, 500, 50, 50));
+  objectList.push(new Object('별', '별1', 100, 100, 50, 50));
+  objectList.push(new Object('별', '별2', 400, 538, 50, 50));
+  objectList.push(new Object('별', '별3', 730, 70, 50, 50));
+  objectList.push(new Object('별', '별4', 983, 500, 50, 50));
   objectList.push(new Object('매그넘', '매그넘', 1000, 100, 70, 50));
   objectList.push(new Object('해골몬스터', '해골', 1000, canvas.height - 70, 70, 70));
 
