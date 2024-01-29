@@ -640,8 +640,8 @@ function add() {
   objectList.push(new Object('벽돌', 113, 745, 250, 50, 50));
   objectList.push(new Object('벽돌', 114, 790, 250, 50, 50));
   objectList.push(new Object('아이템벽돌', '아이템벽돌', 835, 250, 50, 50));
-  objectList.push(new Object('굼바', 6, 200, canvas.height - 30, 30, 30));
-  objectList.push(new Object('플라잉굼바', 7, 100, 200, 40, 40));
+  objectList.push(new Object('굼바', 6, 200, canvas.height - 40, 40, 40));
+  objectList.push(new Object('플라잉굼바', 7, 100, 140, 50, 50));
   objectList.push(new Object('파이프', '함정', canvas.width - 700, 400, 100, 200));
   objectList.push(new Object('파이프', 0, canvas.width - 100, 400, 100, 200));
 
@@ -865,7 +865,7 @@ function openNewStage2() {
   objectList.push(new Object('벽돌', 114, 790, 250, 50, 50));
   objectList.push(new Object('아이템벽돌', '아이템벽돌', 835, 250, 50, 50));
   objectList.push(new Object('뿔버섯', 6, 200, canvas.height - 80, 80, 80));
-  objectList.push(new Object('플라잉굼바', 7, 100, 200, 40, 40));
+  objectList.push(new Object('플라잉굼바', 7, 100, 200, 50, 50));
   objectList.push(new Object('파이프', '함정', 300, 400, 100, 200));
   objectList.push(new Object('벽돌', '막힌벽돌', 400, 395, 50, 50));
   objectList.push(new Object('벽돌', '막힌벽돌', 443, 395, 50, 50));
