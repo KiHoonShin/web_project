@@ -765,7 +765,7 @@ function monsterMove() {
       if (obj.x >= canvas.width - obj.width) {
         flyingBack = true;
       }
-      if (obj.x == obj.width) {
+      if (obj.x <= obj.width) {
         flyingBack = false;
       }
     } else if (obj.name === "아이템버섯" || obj.name === '초록버섯') {
