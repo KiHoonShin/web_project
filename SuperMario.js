@@ -152,7 +152,6 @@ class Player {
     }
     if (keyDown[38]) { // 위로 이동
       this.y -= this.speed;
-      jumpAudio();
       // isPotal = false; 
     }
     if (keyDown[40]) { // 아래로 이동
@@ -161,7 +160,6 @@ class Player {
     }
     if (keyDown[32]) {
       // 스페이스바 눌렀을 때
-      jumpAudio();
       점프중 = true;
     }
 
@@ -955,12 +953,6 @@ function gameOver() {
   audio.play();
 }
 
-function jumpAudio() {
-  var audio = new Audio('./music/jump.wav');
-  audio.load();
-  audio.volume = 0.6;
-  audio.play();
-}
 
 window.onload = function () {
   ctx.drawImage(시작화면, 0, 0, canvas.width, canvas.height);
