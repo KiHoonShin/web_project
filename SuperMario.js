@@ -339,7 +339,7 @@ class Player {
       this.size += 50;
       objectList = objectList.filter(obj => obj.name !== "아이템버섯");
       objectList = objectList.filter(obj => obj.name !== "초록버섯");
-      objectList.push(new Object('oneUp', 5, this.x + 50, this.y - 30, 100, 100));
+      objectList.push(new Object('oneUp', 5, this.x + 50, this.y - 60, 100, 100));
       setTimeout(() => {
         objectList = objectList.filter(obj => obj.name !== "oneUp");
       }, 1000);
