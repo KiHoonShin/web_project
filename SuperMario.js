@@ -248,6 +248,7 @@ class Player {
         // }
         if (obj.name === '매그넘' || obj.name === '해골몬스터') {
           if (마리오커짐) {
+            sizeDown();
             마리오커짐 = false;
             this.size = 50;
           } else {
@@ -302,6 +303,7 @@ class Player {
         if (this.isGumba(obj)) {
           // isOver = true;
           if (마리오커짐) {
+            sizeDown();
             마리오커짐 = false;
             isGreen = false;
             this.size = 50;
@@ -357,6 +359,7 @@ class Player {
       ctx.fillStyle = 'black';
       ctx.fill();
       if (this.life == 0) {
+        gameOver();
         count.style.visibility = 'hidden';
         eatStarCount = 0;
         stage = 0;
@@ -933,6 +936,20 @@ function oneUpSound() {
   var audio = new Audio('./music/1up.wav');
   audio.load();
   audio.volume = 0.5;
+  audio.play();
+}
+
+function sizeDown() {
+  var audio = new Audio('./music/마리오작아짐.wav');
+  audio.load();
+  audio.volume = 0.8;
+  audio.play();
+}
+
+function gameOver() {
+  var audio = new Audio('./music/게임오버.wav');
+  audio.load();
+  audio.volume = 1.3;
   audio.play();
 }
 
