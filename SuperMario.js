@@ -949,7 +949,7 @@ function sizeDown() {
 function gameOver() {
   var audio = new Audio('./music/게임오버.wav');
   audio.load();
-  audio.volume = 1.3;
+  audio.volume = 1;
   audio.play();
 }
 
