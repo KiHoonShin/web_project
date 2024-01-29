@@ -339,10 +339,13 @@ class Player {
       this.size += 50;
       objectList = objectList.filter(obj => obj.name !== "아이템버섯");
       objectList = objectList.filter(obj => obj.name !== "초록버섯");
-      objectList.push(new Object('oneUp', 5, this.x + 50, this.y - 60, 100, 100));
+      oneUpSound();
+      setTimeout(() => {
+        objectList.push(new Object('oneUp', 5, this.x + 50, this.y - 60, 100, 100));
+      }, 800);
       setTimeout(() => {
         objectList = objectList.filter(obj => obj.name !== "oneUp");
-      }, 1000);
+      }, 1500);
     }
     if (isOver) {
       lifeNumber.innerHTML = ` X ${this.life}`;
@@ -924,6 +927,13 @@ function playMusic() {
   } else {
     audio.pause();
   }
+}
+
+function oneUpSound() {
+  var audio = new Audio('./music/1up.wav');
+  audio.load();
+  audio.volume = 0.5;
+  audio.play();
 }
 
 window.onload = function () {
